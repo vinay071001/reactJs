@@ -10,6 +10,7 @@ import Register from './pages/authentication/Register.jsx';
 import Home from './pages/Home.jsx';
 import Layout from './pages/Layout.jsx';
 import { PrivateRoute } from './pages/PrivateRoute.jsx';
+import ProductsCart from './pages/ProductsCart.jsx';
 import QuizCategory from './pages/quiz/QuizCategory.jsx';
 import QuizDashboard from './pages/quiz/QuizDashboard.jsx';
 import QuizHome from './pages/quiz/QuizHome.jsx';
@@ -40,6 +41,14 @@ export default function App() {
           element={
             <Layout>
               <WeatherApp />
+            </Layout>
+          }
+        />
+        <Route
+          path="/productsCart"
+          element={
+            <Layout>
+              <ProductsCart />
             </Layout>
           }
         />

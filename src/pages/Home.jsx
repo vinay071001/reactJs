@@ -53,6 +53,18 @@ export default function Home() {
         </div>
         <div className="block-3-content">
           <ProjectsCard
+            image={
+              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5i4v_H1Gajo5yd5JDEj71dfKkxdBAIHkEIg&usqp=CAU'
+            }
+            heading={'Products Cart'}
+            description={
+              'It is a quiz application in which you can signUp and attempt any quiz and can check your score.'
+            }
+            techStack={'HTML, CSS, JavaScript, Reactjs, Redux, Material ui, Chartjs'}
+            previewLink={'/productsCart'}
+            codeLink={'https://bitbucket.org/_vinaychoudhary/reactjspractice/src/dev/'}
+          />
+          <ProjectsCard
             image={'https://apptraitsolutions.com/wp-content/uploads/2021/01/C88IZyEo7g-1.jpg'}
             heading={'Quiz App'}
             description={
