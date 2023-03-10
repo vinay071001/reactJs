@@ -23,6 +23,7 @@
         display: flex;
         flex-wrap: wrap;
         width: 100%;
+        justify-content: center;
 
         .productsCardWrap {
             display: flex;
@@ -65,33 +66,41 @@
     }
 
     .cartWrap {
-        position: absolute;
-        width: 100%;
-        top: 0;
-        background: rgb(0 0 0 / 86%);
-        min-height: 100vh;
+        align-items: center;
+        // background-color: white;
+        // background: antiquewhite;
+        background: #eefdff;
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
+        min-height: 90vh;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        margin-top: 100px;
 
         .cartWrap-header {
             margin: 12px 0px;
             font-size: 22px;
             font-weight: 600;
-            color: white;
         }
 
         .cartWrap-content {
-            width: 100%;
+            width: 40%;
+            /* background-color: antiquewhite; */
+            background: #3f4245;
+            border-radius: 15px;
+            padding: 25px 0px;
 
             .cartWrap-content-list {
+                align-items: center;
+                background: hsla(0, 0%, 100%, 0.929);
                 display: flex;
                 justify-content: space-around;
+                margin: 25px 60px;
                 padding: 15px 0px;
-                background: #ffffffed;
-                margin: 25px;
-                align-items: center;
+                /* width: 40%;*/
+                border-radius: 5px;
 
                 .quantityBtn {
                     font-size: 15px;
@@ -117,21 +126,11 @@
             }
         }
 
-        .cartWrap-footer {
-            display: flex;
-            justify-content: space-around;
-            width: 20%;
-            background: rgba(255, 255, 255, 0.9294117647);
-            color: black;
-            padding: 21px 20px;
-
-        }
-
         .discountBtn {
             margin: 21px 0px;
             padding: 12px;
             border: 0;
-            border-radius: 2px;
+            border-radius: 5px;
             font-size: 13px;
             cursor: pointer;
         }

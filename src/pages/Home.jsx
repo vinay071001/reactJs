@@ -58,9 +58,9 @@ export default function Home() {
             }
             heading={'Products Cart'}
             description={
-              'It is a quiz application in which you can signUp and attempt any quiz and can check your score.'
+              'It is a products cart application in which you can add remove products in your cart.'
             }
-            techStack={'HTML, CSS, JavaScript, Reactjs, Redux, Material ui, Chartjs'}
+            techStack={'HTML, CSS, JavaScript, Reactjs, Material ui'}
             previewLink={'/productsCart'}
             codeLink={'https://bitbucket.org/_vinaychoudhary/reactjspractice/src/dev/'}
           />

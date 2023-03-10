@@ -93,34 +93,6 @@ export default function productsCart() {
   return (
     <>
       <div className="productsCartPageWrapper">
-        <div className="productCartBtnWrap">
-          <button className="cartBtn" onClick={() => handleCartModal()}>
-            View Cart
-          </button>
-        </div>
-        <div className="productListsWrap">
-          {productsList &&
-            productsList.map((obj) => {
-              return (
-                <div key={obj.id} className="productsCardWrap">
-                  <div className="pageCardWrap-header">
-                    <img src="https://www.productsamples.com/wp-content/uploads/2021/10/il-box.png" />
-                  </div>
-                  <div className="pageCardWrap-content">
-                    <h3 className="productsCardTitle">{obj.title}</h3>
-                    <p className="productsCardDescription">{obj.description}</p>
-                    <h4 className="productsCardPrice">Price:- {obj.price} INR</h4>
-                    <p className="prodcutsCardDiscount">{obj.discountPercentage} %OFF</p>
-                  </div>
-                  <div className="pageCardWrap-footer">
-                    <button className="productsCardBtn" onClick={() => handleAddCart(obj)}>
-                      Add to cart
-                    </button>
-                  </div>
-                </div>
-              );
-            })}
-        </div>
         {viewCartModal ? (
           <div className="cartWrap" id="outsideCart" onClick={(e) => handleCartModalView(e)}>
             <div className="cartWrap-header">Cart</div>
@@ -154,17 +126,47 @@ export default function productsCart() {
                   </div>
                 );
               })}
+              <div className="cartWrap-content-list">
+                <div>Total</div>
+                <div>{totalValue} INR</div>
+              </div>
             </div>
-            <div className="cartWrap-footer">
-              <div>Total</div>
-              <div>{totalValue}</div>
-            </div>
+            {/* <div className="cartWrap-footer"></div> */}
             <button className="discountBtn" disabled={disabledBtn} onClick={() => handleDiscount()}>
               Apply 10% discount
             </button>
           </div>
         ) : (
-          ''
+          <>
+            <div className="productCartBtnWrap">
+              <button className="cartBtn" onClick={() => handleCartModal()}>
+                View Cart
+              </button>
+            </div>
+            <div className="productListsWrap">
+              {productsList &&
+                productsList.map((obj) => {
+                  return (
+                    <div key={obj.id} className="productsCardWrap">
+                      <div className="pageCardWrap-header">
+                        <img src="https://www.productsamples.com/wp-content/uploads/2021/10/il-box.png" />
+                      </div>
+                      <div className="pageCardWrap-content">
+                        <h3 className="productsCardTitle">{obj.title}</h3>
+                        <p className="productsCardDescription">{obj.description}</p>
+                        <h4 className="productsCardPrice">Price:- {obj.price} INR</h4>
+                        <p className="prodcutsCardDiscount">{obj.discountPercentage} %OFF</p>
+                      </div>
+                      <div className="pageCardWrap-footer">
+                        <button className="productsCardBtn" onClick={() => handleAddCart(obj)}>
+                          Add to cart
+                        </button>
+                      </div>
+                    </div>
+                  );
+                })}
+            </div>
+          </>
         )}
       </div>
       <Snackbar open={open} autoHideDuration={500} onClose={handleClose}>
